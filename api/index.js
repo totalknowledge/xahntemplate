@@ -1,6 +1,14 @@
 const Hapi = require('hapi');
-
 const server = Hapi.server({port:4000});
+
+// var caminte = require('caminte'),
+//     Schema = caminte.Schema,
+//     config = {
+//          driver     : "sqlite3",
+//          database   : "my.db"
+//     };
+//
+// var schema = new Schema(config.driver, config);
 
 server.route({
   path: '/{getApiCall*}',
@@ -51,4 +59,11 @@ const start = async () => {
   console.log('Started listening on %s', server.info.uri);
 };
 
-start();
+try {
+  start();
+}
+catch (err) {
+  console.log('closing');
+  //db.on('close');
+  //db.close();
+}

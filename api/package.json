@@ -4,11 +4,15 @@
   "description": "API, hapi, web services, backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^17.5.1"
+    "hapi": "^17.5.1",
+    "reflect-metadata": "^0.1.12",
+    "sqlite3": "^4.0.0",
+    "typeorm": "^0.2.7"
   }
 }

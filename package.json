@@ -15,6 +15,5 @@
   "license": "Proprietary",
   "devDependencies": {
     "@angular/cli": "^6.0.7",
-    "hapi": "^17.5.1"
   }
 }
