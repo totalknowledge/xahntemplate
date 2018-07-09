@@ -1,2 +1,6 @@
-node_modules
-my.db
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
