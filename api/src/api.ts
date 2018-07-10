@@ -25,6 +25,11 @@ export class Api {
       handler: require('./handler/post').post
     });
     this.server.route({
+      path: '/users',
+      method: 'POST',
+      handler: require('./handler/UserHandler').post
+    });
+    this.server.route({
       path: '/{getApiCall*}',
       method: 'PUT',
       handler: require('./handler/put').put

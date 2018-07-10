@@ -4,7 +4,7 @@ import {BaseEntity, Entity, PrimaryGeneratedColumn, Column} from "typeorm";
 export class User extends BaseEntity {
 
     @PrimaryGeneratedColumn()
-    id: string;
+    id: number;
 
     @Column()
     firstName: string;
@@ -13,6 +13,6 @@ export class User extends BaseEntity {
     lastName: string;
 
     @Column()
-    age: number;
+    cec: string;
 
 }
