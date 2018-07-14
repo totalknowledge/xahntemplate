@@ -1,12 +1,11 @@
 export class Api {
-  //connection: any;
   server: any;
 
   constructor(connection: any) {
     let Hapi = require('hapi');
     this.server = Hapi.server({port:4000});
-    //this.server.connection = connection;
 
+    // Generic Error Routes
     this.server.route({
       path: '/{getApiCall*}',
       method: 'GET',
@@ -14,21 +13,26 @@ export class Api {
         return {message:'h'};
       }
     });
+
+    // Users Collection Routes
     this.server.route({
       path: '/users/{id?}',
       method: 'GET',
       handler: require('./handler/UserHandler').get
     });
     this.server.route({
+      path: '/users/{id?}',
+      method: 'POST',
+      handler: require('./handler/UserHandler').post
+    });
+
+    // Generic Routes to be moved up above etc.
+    this.server.route({
       path: '/{getApiCall*}',
       method: 'POST',
       handler: require('./handler/post').post
     });
-    this.server.route({
-      path: '/users',
-      method: 'POST',
-      handler: require('./handler/UserHandler').post
-    });
+
     this.server.route({
       path: '/{getApiCall*}',
       method: 'PUT',
