@@ -14,6 +14,6 @@
   "author": "Bryan Patrick Coleman",
   "license": "Proprietary",
   "devDependencies": {
-    "@angular/cli": "^6.0.7",
+    "@angular/cli": "^6.0.7"
   }
 }
