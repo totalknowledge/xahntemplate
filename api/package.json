@@ -8,10 +8,10 @@
       "typescript": "2.5.2"
    },
    "dependencies": {
-      "hapi": "^17.8.5",
+      "@hapi/hapi": "^20.0.0",
       "reflect-metadata": "^0.1.13",
       "sqlite3": "^4.0.8",
-      "typeorm": "0.2.7"
+      "typeorm": "^0.2.25"
    },
    "scripts": {
       "start": "ts-node src/index.ts"
